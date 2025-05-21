@@ -35,21 +35,22 @@ Beyond coding, I’m always curious to learn new technologies and improve my ski
   <h2>Education</h2>
   <br></br>
   <div className="education-entry">
-    <h4> Pursuing Bachelor of Technology (B.Tech) in Computer Science and Engineering</h4>
-    <p>XYZ University — <em>2022 – 2026</em></p>
-    <p>From ABC colllege</p>
-  </div>
+  <h4>Pursuing Bachelor of Technology (B.Tech) in Computer Science and Engineering</h4>
+  <p>Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere </p>
+  <p>College: Deogiri Institute of Engineering and Management Studies, Aurangabad  <em>(2022 – 2026)</em></p>
+</div>
+
 
   <div className="education-entry">
     <h4>Higher Secondary Certificate (HSC) – Class 12</h4>
-    <p>PQR College — <em>2020 – 2022</em></p>
-    <p> Percentage - 87%</p>
+    <p>College- Deogiri College  <em>2020 – 2022</em></p>
+    <p> Percentage - 85.50%</p>
   </div>
 
   <div className="education-entry">
-    <h4>Secondary School Certificate (SSC) – Class 10</h4>
-    <p>MNO school  — <em>2019 – 2020</em></p>
-    <p>Percentage- 91.9%</p>
+    <h4>Secondary School Certificate (CBSE) – Class 10</h4>
+    <p>school — Deogiri Global Academy <em>2019 – 2020</em></p>
+    <p>Percentage- 91.8%</p>
   </div>
 </div>
 <div className="about-card1">
