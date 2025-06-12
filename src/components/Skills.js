@@ -1,135 +1,74 @@
-import React from 'react'
+import React from 'react';
+import '../styles/skills.css';
 
 function Skills() {
   return (
-    <section className="about-section" id="about">
-          <div className="about-container">
-            <div className="about-image">
-       
-            </div>
-           
-    
-          
-        <div className="cards-container">
-      <div className="about-card">
-        <div className="card-content">
-          <div className="about-content">
-            <h1>About Me</h1>
-            <br></br>
-            <p className='para'>I have developed a strong skill set across various programming languages, frameworks, and tools that enable me to build efficient and scalable web and mobile applications. My technical expertise,
-               combined with problem-solving abilities and a continuous learning mindset, allows me to tackle diverse challenges effectively.</p>
+    <section className="skills-section" id="skills">
+      <div className="skills-container">
+
+        {/* Intro Card */}
+        <div className="skills-card">
+          <div className="skills-content">
+            <h1>My Skills</h1>
+            <p className="skills-para">
+              I have developed a strong skill set across various programming languages, frameworks, and tools that enable me to build efficient and scalable web and mobile applications. My technical expertise, combined with problem-solving abilities and a continuous learning mindset, allows me to tackle diverse challenges effectively.
+            </p>
           </div>
-          
         </div>
-    
-        
-        <div className="inner-cards">
-         <div className="about-card1">
-      <h2>Programming Languages </h2>
-      <br></br>
-      <div className="education-entry">
-        <ul>
-          <li>
-            C
-          </li>
-                    <li>
-            Java
-          </li>
-                    <li>
-            Javascript
-          </li>
-                    <li>
-            Python
-          </li>
-                    <li>
-            HTML 
-          </li>
-                    <li>
-            CSS
-          </li>
-        </ul>
-      </div>
-    
-      
-    </div>
-    
-          <div className="about-card1">
-            <h3>Web Development Technologies</h3>
-            <br></br>
-             <ul>
-          <li>
-            React.js
-          </li>
-                    <li>
-            Node.js
-          </li>
-                    <li>
-            Express.js
-          </li>
-                    <li>
-            MongoDB
-          </li>
-                    <li>
-            PHP
-          </li>
-                    <li>
-            MySQL
-          </li>
-        </ul>
+
+        {/* Skills Grid */}
+        <div className="skills-grid">
+
+          <div className="skills-card1">
+            <h2>Programming Languages</h2>
+            <ul>
+              <li>C</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
           </div>
-          <div className="about-card1">
-            <h3>Soft Skills</h3>
-            <br></br>
-             <ul>
-          <li>
-          Adaptability
-          </li>
-                    <li>
-            Communication
-          </li>
-                    <li>
-            Teamwork
-          </li>
-                    <li>
-            Time Management
-          </li>
-                    <li>
-            Leadership
-          </li>
-                    <li>
-            Problem solving
-          </li>
-        </ul>
+
+          <div className="skills-card1">
+            <h2>Web Development Technologies</h2>
+            <ul>
+              <li>React.js</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MongoDB</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+            </ul>
           </div>
-          <div className="about-card1">
-            <h3>Languages</h3>
-            <br></br>
-          <ul>
-          <li>
-            English(Fluent)
-          </li>
-                    <li>
-            Hindi(Fluent)
-          </li>
-                    <li>
-            Marathi(Fluent)
-          </li>
-                    <li>
-            Sanskrit(Fluent)
-          </li>
-                    
-        </ul>
+
+          <div className="skills-card1">
+            <h2>Soft Skills</h2>
+            <ul>
+              <li>Adaptability</li>
+              <li>Communication</li>
+              <li>Teamwork</li>
+              <li>Time Management</li>
+              <li>Leadership</li>
+              <li>Problem Solving</li>
+            </ul>
           </div>
-          
+
+          <div className="skills-card1">
+            <h2>Languages</h2>
+            <ul>
+              <li>English (Fluent)</li>
+              <li>Hindi (Fluent)</li>
+              <li>Marathi (Fluent)</li>
+              <li>Sanskrit (Fluent)</li>
+            </ul>
+          </div>
+
         </div>
       </div>
-    </div>
-    
-    
-          
-          </div>
-        </section>
-  )
+    </section>
+  );
 }
 
-export default Skills
+export default Skills;

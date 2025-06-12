@@ -1,0 +1,122 @@
+.cert-section {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+}
+
+.cert-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.cert-intro {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+.cert-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ffa500; /* Tailwind's blue-600 */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.cert-link:hover {
+  background-color: #ffa500; /* Tailwind's blue-700 */
+}
+
+.cert-intro h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  border-left: 5px solid #ffa500;
+  padding-left: 15px;
+}
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.cert-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes button to the bottom */
+  min-height: 220px; /* Adjust based on your content */
+}
+
+.cert-card h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Certificate Button */
+.cert-link {
+  margin-top: auto; /* Ensures it stays at the bottom */
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ffa500;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Optional: align left inside card */
+}
+
+.cert-link:hover {
+  background-color: #ffbb33;
+}
+
+.cert-para {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.cert-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cert-card h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/contact.css'; 
+import '../styles/contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,56 +15,71 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-  
-    alert('Message sent!');
-    setFormData({ name: '', email: '', message: '' });
+
+    try {
+      const response = await fetch('http://localhost:5000/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert('✅ Your message has been sent!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('❌ Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('❌ Error sending message. Try again later.');
+    }
   };
 
   return (
-    <div className="contact-container">
-      <h1>Contact Me</h1>
-      <p>If you'd like to work together or share innovative thoughts of project, use the form below.</p>
+    <div className="contact-section">
+      <h1>📬 Contact Me</h1>
+      <p>Let's connect! Whether you want to collaborate or share an idea, drop a message below.</p>
 
       <form onSubmit={handleSubmit} className="contact-form">
-        <label>Name</label>
+        <label htmlFor="name">👤 Name</label>
         <input
-          type="text"
+          id="name"
           name="name"
+          type="text"
           required
+          placeholder="Your name"
           value={formData.name}
           onChange={handleChange}
         />
 
-        <label>Email</label>
+        <label htmlFor="email">📧 Email</label>
         <input
-          type="email"
+          id="email"
           name="email"
+          type="email"
           required
+          placeholder="you@example.com"
           value={formData.email}
           onChange={handleChange}
         />
 
-        <label>Message</label>
+        <label htmlFor="message">💬 Message</label>
         <textarea
+          id="message"
           name="message"
           rows="5"
           required
+          placeholder="Your message here..."
           value={formData.message}
           onChange={handleChange}
         />
 
-        <button type="submit">Send Message</button>
+        <button type="submit">🚀 Send Message</button>
       </form>
-
-      <div className="social-links">
-        <p>Or reach out via:</p>
-        <a href="abc@gmail.com">Email</a> | 
-         
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
     </div>
   );
 };

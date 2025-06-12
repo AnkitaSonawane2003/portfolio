@@ -5,7 +5,7 @@ import About from './components/About';
 import Certification from './components/Certification';
 import Contact from './components/Contact';
 import Layout from './components/Layout';
-import Skills from './components/Skills';
+import Skills from './components/skills';
 import Projects from './components/Projects';
 
 
