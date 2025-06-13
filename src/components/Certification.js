@@ -1,7 +1,24 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import '../styles/certifications.css';
+import Typing from './Typing'; 
 
-function Certification() {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut' },
+  },
+};
   const certifications = [
         {
       name: 'Introduction to MongoDB',
@@ -52,38 +69,55 @@ function Certification() {
       link:'https://drive.google.com/file/d/1MsOYqontiOIntP_BqVru02eS88aQ6_1F/view?usp=drive_link'
     },
   ];
-
-  return (
-    <section className="cert-section" id="certifications">
+function Certification() {
+   return (
+    <motion.section
+      className="cert-section"
+      id="certifications"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="cert-container">
-        <div className="cert-intro">
-          <h1>My Certifications</h1>
+        <motion.div className="cert-intro" variants={cardVariants}>
+          <Typing text="My Certifications" />
           <p className="cert-para">
-            To stay current and enhance my skills, I’ve completed several certifications in full stack development, cloud computing, and emerging technologies from top platforms.
+            To stay current and enhance my skills, I’ve completed several certifications in full
+            stack development, cloud computing, and emerging technologies from top platforms.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="cert-grid">
+        <motion.div className="cert-grid" variants={containerVariants}>
           {certifications.map((cert, index) => (
-            <div className="cert-card" key={index}>
+            <motion.div
+              className="cert-card"
+              key={index}
+              variants={cardVariants}
+              whileHover={{ scale: 1.02, y: -2 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
               <h3>{cert.name}</h3>
-              <p><strong>Organization:</strong> {cert.org}</p>
-              <p><strong>Issue Date:</strong> {cert.date}</p>
+              <p>
+                <strong>Organization:</strong> {cert.org}
+              </p>
+              <p>
+                <strong>Issue Date:</strong> {cert.date}
+              </p>
               {cert.link && (
-                <a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cert-link"
-                >
-                  View Certificate
-                </a>
+              <a
+  href={cert.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="cert-button"
+>
+   View Certificate
+</a>
               )}
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

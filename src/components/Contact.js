@@ -41,7 +41,7 @@ const Contact = () => {
 
   return (
     <div className="contact-section">
-      <h1>📬 Contact Me</h1>
+      <h1>Contact Me</h1>
       <p>Let's connect! Whether you want to collaborate or share an idea, drop a message below.</p>
 
       <form onSubmit={handleSubmit} className="contact-form">
@@ -62,7 +62,7 @@ const Contact = () => {
           name="email"
           type="email"
           required
-          placeholder="you@example.com"
+          placeholder="your email"
           value={formData.email}
           onChange={handleChange}
         />
@@ -78,7 +78,7 @@ const Contact = () => {
           onChange={handleChange}
         />
 
-        <button type="submit">🚀 Send Message</button>
+        <button type="submit">Send Message</button>
       </form>
     </div>
   );

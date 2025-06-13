@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,11 +6,12 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Section Container */
+
 .about-section {
   background-color: whitesmoke;
   padding: 60px 20px;
 }
+
 .resume-button {
   display: inline-block;
   padding: 10px 20px;
@@ -23,10 +24,9 @@
 }
 
 .resume-button:hover {
-  background-color: #ffa500;
+  background-color: #ffbb33;
 }
 
-/* Main Container */
 .about-container {
   max-width: 1200px;
   margin: auto;
@@ -35,7 +35,7 @@
   gap: 40px;
 }
 
-/* About Card (combining text + image) */
+
 .about-card {
   display: flex;
   flex-wrap: wrap;
@@ -47,19 +47,20 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-/* About Text Section */
+
 .about-content {
   flex: 1 1 500px;
   min-width: 280px;
 }
 
-.about-content h1 {
+.about-content > h1 {
   font-size: 2.5rem;
   color: #2c3e50;
   margin-bottom: 20px;
   border-left: 5px solid #ffa500;
   padding-left: 15px;
 }
+
 
 .para {
   font-size: 1.05rem;
@@ -68,7 +69,7 @@
   margin-bottom: 15px;
 }
 
-/* Image Styling */
+
 .about-image {
   flex: 0 0 300px;
   display: flex;
@@ -88,25 +89,58 @@
   transform: scale(1.03);
 }
 
-/* Inner Cards Grid */
+
 .inner-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
-/* Individual Grid Card */
 .about-card1 {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+ 
+  cursor: pointer;
+}
+.about-card1 h3 {
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+.typing-name {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+
+.typing-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.typing-header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  
+  color: #2c3e50;
+}
+
+
+.about-card1 p,
+.about-card1 ul {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .about-card1:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  /* No transform here — handled by framer-motion */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-card1 h2,
