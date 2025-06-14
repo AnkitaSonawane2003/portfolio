@@ -1,0 +1,120 @@
+.cert-section {
+  background-color: whitesmoke;
+  padding: 60px 20px;
+}
+
+.cert-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cert-intro {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.cert-intro h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  border-left: 5px solid #ffa500;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+.cert-para {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+
+.cert-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cert-card h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.cert-link {
+  color: #ffa500;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.cert-link:hover {
+  color: #ff8800;
+}
+.cert-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  min-height: 250px; 
+  cursor: pointer;
+}
+
+.cert-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #ffa500;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 0.95rem;
+  margin-top: 10px; 
+  align-self: flex-start; 
+}
+
+.cert-button:hover {
+  background-color: #ff9900;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  .cert-intro h1 {
+    font-size: 2rem;
+  }
+
+  .cert-card {
+    padding: 18px;
+  }
+}

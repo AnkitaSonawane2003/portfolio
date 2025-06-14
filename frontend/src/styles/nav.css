@@ -1,0 +1,136 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.pics {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffffff33;
+  transition: transform 0.3s ease;
+}
+
+.pics:hover {
+  transform: scale(1.05);
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e2f;
+  padding: 20px 32px;
+  height: 100px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #ffffff;
+  user-select: none;
+}
+
+/* Navigation links */
+.link {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.link li a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+
+.link li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #ffa500;
+  transition: width 0.3s ease;
+}
+
+.link li a:hover {
+  color: #ffa500;
+}
+
+.link li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .link {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e2f;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .link.active {
+    display: flex;
+  }
+
+  .link li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .link li a {
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
