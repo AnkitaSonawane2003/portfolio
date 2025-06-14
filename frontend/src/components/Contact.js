@@ -8,6 +8,9 @@ const Contact = () => {
     message: ''
   });
 
+  const [statusMsg, setStatusMsg] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e) => {
     setFormData(prev => ({
       ...prev,
@@ -17,6 +20,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setStatusMsg('');
 
     try {
       const response = await fetch('http://localhost:5000/contact', {
@@ -28,15 +33,17 @@ const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        alert('✅ Your message has been sent!');
+        setStatusMsg('✅ Your message has been sent!');
         setFormData({ name: '', email: '', message: '' });
       } else {
-        alert('❌ Failed to send message. Please try again.');
+        setStatusMsg('❌ Failed to send message. Please try again.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('❌ Error sending message. Try again later.');
+      setStatusMsg('❌ Error sending message. Try again later.');
     }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -78,8 +85,12 @@ const Contact = () => {
           onChange={handleChange}
         />
 
-        <button type="submit">Send Message</button>
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
       </form>
+
+      {statusMsg && <p className="status-message">{statusMsg}</p>}
     </div>
   );
 };
