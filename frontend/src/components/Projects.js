@@ -5,6 +5,7 @@ import '../styles/project.css';
 import pic1 from '../assets/scholar.png';
 import pic2 from '../assets/NGO.png';
 import pic3 from '../assets/device3.jpeg';
+import pic4 from '../assets/home.png';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -55,6 +56,14 @@ function Projects() {
         'A job-matching platform connecting skilled workers with customers.A platform that connects skilled workers like electricians, plumbers, and carpenters with people needing their services. It helps workers find job opportunities while making it easier for users to hire professionals, worker profTech.',
       tech: 'HTML, CSS, JavaScript, PHP, MySQL',
       github: '',
+    },
+    {
+      title: 'Spam Message Classification',
+      description:
+        'Spam Message Classification is a mobile application built using Flutter that uses machine learning to classify text messages as Spam or Not Spam. It integrates with a FastAPI backend running a Naive Bayes classifier and stores classified messages in Supabase.The app allows users to enter messages, get instant predictions, and swipe messages to manually label them, improving dataset quality.',
+      tech: 'Flutter (Dart),flip_card,supabase_flutter,http, Python,FastAPI,scikit-learn (Naive Bayes),joblib,Render (deployment)',
+      github: '',
+       image: pic4,
     },
   ];
 
