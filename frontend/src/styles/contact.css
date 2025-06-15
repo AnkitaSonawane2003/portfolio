@@ -61,10 +61,10 @@
 .contact-form button {
   padding: 12px 20px;
   background-color: #ffa500;
-  width: 220px;
+  width: 100%;
   color: white;
   font-size: 1rem;
-    margin-left: 200px;
+ text-align: center;
   border: none;
   border-radius: 8px;
   cursor: pointer;
