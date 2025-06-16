@@ -47,7 +47,7 @@ function Projects() {
       title: 'Women Safety Device',
       description:
         ' A smart wearable Women Safety Device that sends GPS location, SMS alerts, and initiates phone calls when a button is pressed during emergencies.It uses the A9G GPS & GSM module for real-time tracking and communication.The device is powered by an ESP32 C3 (XIAO) and programmed using Arduino IDE.',
-      tech: '',
+     
       github: '',
       image: pic3,
     },
