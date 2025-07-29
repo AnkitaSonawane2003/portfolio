@@ -79,7 +79,7 @@ function About() {
         <>
           <p className="head">Frontend Developer | Backend Developer | Problem Solver | Tech Enthusiast</p>
           <a
-            href="/final.pdf"
+            href="/resume.pdf"
             download
             className="resume-button"
             target="_blank"
