@@ -1,0 +1,99 @@
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  border-left: 5px solid #ffa500;
+  padding-left: 15px;
+  text-align: left;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+  resize: none;
+  background-color: #fafafa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ffa500;
+  background-color: #fff;
+}
+.contact-form button {
+  padding: 12px 20px;
+  background-color: #ffa500;
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+ text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: center; /* Centers the button inside the flex container */
+}
+
+
+.contact-form button:hover {
+  background-color: #ff9900;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-section h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form button {
+    width: 100%; /* full width button on mobile */
+  }
+}
