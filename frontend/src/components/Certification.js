@@ -20,6 +20,12 @@ const cardVariants = {
   },
 };
   const certifications = [
+     {
+      name: 'Getting Started with NodeJS',
+      org: 'Simplilearn',
+      date: '23 July 2025',
+      link:'https://drive.google.com/file/d/1SipfbJsyi1NXEXFww6RI0hGa59mOZBoi/view?usp=drive_link'
+    },
         {
       name: 'Introduction to MongoDB',
       org: 'MongoDB University',
