@@ -21,6 +21,12 @@ const cardVariants = {
 };
   const certifications = [
      {
+      name: 'Java DSA Course-Master the Fundamentals and Beyond',
+      org: 'Scaler',
+      date: '2 August 2025',
+      link:'https://drive.google.com/file/d/1MJf7tYQ-_SsOnAZUPWvoJOzJ7fIGRWuO/view?usp=drive_link'
+    },
+     {
       name: 'Getting Started with NodeJS',
       org: 'Simplilearn',
       date: '23 July 2025',
