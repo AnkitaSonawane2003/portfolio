@@ -20,6 +20,24 @@ const cardVariants = {
   },
 };
   const certifications = [
+    {
+      name: 'Google Cloud Career Launchpad-Generative AI Leader track',
+      org: 'Google Cloud',
+      date: '6 September 2025',
+      link:'https://drive.google.com/file/d/18-Suw_hHbEZWT_Ej6bjX2A8i0siAjUFK/view?usp=drive_link'
+    },
+     {
+      name: 'Java DSA Course-Master the Fundamentals and Beyond',
+      org: 'Scaler',
+      date: '2 August 2025',
+      link:'https://drive.google.com/file/d/1MJf7tYQ-_SsOnAZUPWvoJOzJ7fIGRWuO/view?usp=drive_link'
+    },
+     {
+      name: 'Getting Started with NodeJS',
+      org: 'Simplilearn',
+      date: '23 July 2025',
+      link:'https://drive.google.com/file/d/1SipfbJsyi1NXEXFww6RI0hGa59mOZBoi/view?usp=drive_link'
+    },
         {
       name: 'Introduction to MongoDB',
       org: 'MongoDB University',
@@ -57,7 +75,7 @@ const cardVariants = {
       link:'https://drive.google.com/file/d/10sHvVW1C7lH9onaUfy05QVqyY8UDDky_/view?usp=drive_link'
     },
     {
-      name: 'Google Cloud Career Launchpad',
+      name: 'Google Cloud Career Launchpad-Cloud Engineer track',
       org: 'Google Cloud',
       date: '3 September 2024',
       link:'https://drive.google.com/file/d/1LLJYggRbdlagqhXFchaYbo0AFw0XhObN/view?usp=drive_link'

@@ -30,7 +30,7 @@ function About() {
         <>
           <div className="education-entry">
             <h4>Pursuing B.Tech in CSE</h4>
-            <p>DBATU, Deogiri Institute of Engineering and Management Studies <br /><em>(2022 – 2026)</em></p>
+            <p>DBATU, Deogiri Institute of Engineering and Management Studies <br /><em>(2022 – 2026)</em>- CGPA-8.51</p>
           </div>
           <div className="education-entry">
             <h4>HSC – Class 12</h4>
@@ -79,7 +79,7 @@ function About() {
         <>
           <p className="head">Frontend Developer | Backend Developer | Problem Solver | Tech Enthusiast</p>
           <a
-            href="/Final Resume.pdf"
+            href="/resume.pdf"
             download
             className="resume-button"
             target="_blank"
