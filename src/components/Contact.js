@@ -18,33 +18,36 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setStatusMsg('');
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  console.log('Submitting form with:', formData);
+  setIsSubmitting(true);
+  setStatusMsg('');
 
-    try {
-      const response = await fetch('https://portfolio-backend-kfhe.onrender.com/contact', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(formData)
-});
+  try {
+    const response = await fetch('http://localhost:5000/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
 
-      const data = await response.json();
+    console.log('Response status:', response.status);
+    const data = await response.json();
+    console.log('Response data:', data);
 
-      if (data.success) {
-        setStatusMsg('✅ Your message has been sent!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setStatusMsg('❌ Failed to send message. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setStatusMsg('❌ Error sending message. Try again later.');
+    if (data.success) {
+      setStatusMsg('✅ Your message has been sent!');
+      setFormData({ name: '', email: '', message: '' });
+    } else {
+      setStatusMsg('❌ Failed to send message. Please try again.');
     }
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    setStatusMsg('❌ Error sending message. Try again later.');
+  }
 
-    setIsSubmitting(false);
-  };
+  setIsSubmitting(false);
+};
 
   return (
     <div className="contact-section">
